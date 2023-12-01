@@ -1,0 +1,443 @@
+@font-face {
+    font-family: "welcome-bold";
+    src: url('../sao-welcome.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "sao-bold";
+    src: url('../sao-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "sao-regular";
+    src: url('../sao-regular.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #448282;
+    --secundary-color: white;
+    --terniary-color: black;
+    --hover-color: #448282;
+}
+
+
+html {
+    font-size: 10px;
+    background: white;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: "sao-regular";
+}
+
+/*Estructura general */
+
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+    
+    .portafolio-seccion {
+        display:none;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+    
+    .cover{
+        display: none;
+    }
+
+    .portafolio-item{
+        display: none;
+    }
+
+    #portafolio{
+        display: none;
+    }
+    #portafolio-link{
+        display: none;
+
+    }
+    .bloque-horizontal{
+        display: none;
+    }
+
+    .horizontal{
+        display: none;
+    }
+}
+
+.titulo-extern {
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
+}
+
+/*Perfil*/
+
+.perfil {
+    grid-column: 1/-1;
+    margin-bottom: 2rem;
+}
+
+.contenedor-perfil {
+    display: flex;
+    gap: 2rem;
+}
+
+.foto-perfil {
+    max-width: 250px;
+}
+
+.nombre-perfil {
+    font-family: "welcome-bold";
+}
+
+
+.nombre {
+    color: var(--primary-color);
+    font-size: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    display: block;
+    margin-bottom: -0.8rem;
+}
+
+.apellido-materno {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+.carrera {
+    font-size: 2.5rem;
+    font-family: sao-bold;
+    color: var(--secundary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor-perfil {
+        flex-direction: column;
+    }
+}
+
+
+/* Reutilizables*/
+
+.texto {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--terniary-color);
+    font-family: "sao-regular";
+    font-weight: 100;
+}
+
+.item-pre-titulo {
+    font-size: 1.6rem;
+    color: var(--terniary-color);
+    font-weight: 300;
+}
+
+.item-titulo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+
+.item-sub-titulo {
+    font-size: 1.6rem;
+    color: var(--terniary-color);
+    font-weight: 400;
+}
+
+
+.titulo {
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+
+/*subpartes */
+
+.lista-tecno {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+    column-count: 2;
+
+}
+
+/* educación */
+
+.educacion {
+    margin-top: 2rem;
+}
+
+.certificacion {
+    margin-top: 2rem;
+}
+
+.educacion-item {
+    margin-top: 2rem;
+}
+
+/* Experiencia */
+.item-experiencia {
+    margin-top: 2rem;
+}
+
+/* proyectos */
+.proyectos {
+    margin-top: 2rem;
+}
+
+.item-proyecto {
+    margin-top: 2rem;
+}
+
+/*Miscaleneos*/
+
+#Matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.mapa {
+    -webkit-filter: sepia(100%) hue-rotate(180deg);
+    filter: sepia(100%) hue-rotate(180deg);
+    margin-top: 2rem;
+}
+
+hr {
+    grid-column: 1/-1;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid var(--terniary-color);
+}
+
+label {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+input {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+
+textarea {
+    width: 100%;
+    height: 20rem;
+    margin-top: 2rem;
+
+}
+
+.contacto {
+    margin-top: 20px;
+}
+
+.mensaje {
+    margin-top: 20px !important;
+}
+
+.boton-enviar {
+    display: inline-block;
+    padding: 10px 20px;
+    /* Adjust padding to control button size */
+    background-color: var(--primary-color);
+    /* Button background color */
+    color: var(--secundary-color);
+    /* Button text color */
+    border: none;
+    /* Remove default button border */
+    border-radius: 4px;
+    /* Rounded corners for the button */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bloque-horizontal {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--secundary-color);
+    font-weight: 500;
+
+}
+
+.boton-enviar:hover {
+    background-color: var(--hover-color);
+    /* Color change on hover */
+}
+
+
+.horizontal {
+    display: inline;
+    margin-right: 20px;
+    /* Display list items inline */
+    /* Add space between list items */
+
+}
+
+a {
+    color: var(--terniary-color);
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+
+/*  Redes Sociales */
+
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.redes-seccion {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-item {
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+.fa-linkedin:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+.fa-github:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+.link {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--terniary-color)
+}
+
+footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+
+/*  Sección Portafolio */
+
+.portafolio-seccion {
+    margin-left: 35rem;
+    margin-right: 35rem;
+    margin-top: 3.5rem;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portafolio-item {
+    width: 308px;
+    height: 229px;
+    overflow: hidden;
+    margin: 2rem;
+    position: relative;
+    
+    
+}
+
+.portafolio-imagen {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.cover {
+    background-color: rgba(2, 8, 26, 0.7);
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column ;
+    
+}
+
+.portafolio-item:hover .cover,
+.portafolio-imagen:hover,
+.portafolio-link .icono-link .icono-link .cover {
+    visibility: visible;
+    position: absolute;
+}
