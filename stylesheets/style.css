@@ -110,6 +110,9 @@ body {
 
 .foto-perfil {
     max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nombre-perfil {
@@ -137,7 +140,7 @@ body {
 .carrera {
     font-size: 2.5rem;
     font-family: sao-bold;
-    color: var(--secundary-color);
+    color: var(--primary-color);
 }
 
 @media only screen and (max-width: 768px) {
